@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <Python.h>
+#include "Python.h"
 
 /**
- * print_python_bytes - Outputs all  bytes information
+ * print_python_bytes - Prints bytes information
  *
- * @p: Python address of the Object
- * Return: null return
+ * @p: Python Object
+ * Return: no return
  */
 void print_python_bytes(PyObject *p)
 {
@@ -42,10 +42,10 @@ void print_python_bytes(PyObject *p)
 }
 
 /**
- * print_python_list - Outputs the list information
+ * print_python_list - Prints list information
  *
- * @p: Python address of the Object
- * Return: null return
+ * @p: Python Object
+ * Return: no return
  */
 void print_python_list(PyObject *p)
 {
@@ -67,4 +67,3 @@ void print_python_list(PyObject *p)
 		if (PyBytes_Check(obj))
 			print_python_bytes(obj);
 	}
-
